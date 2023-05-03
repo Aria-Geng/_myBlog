@@ -8,15 +8,15 @@ document.addEventListener("pjax:success", initScrollReveal);
 </script><link rel="icon" type="image/svg+xml" href="/_myBlog/yun.svg"><link rel="mask-icon" href="/_myBlog/yun.svg" color="#0078E7"><link rel="preload" href="/_myBlog/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/_myBlog/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://fastly.jsdelivr.net/npm/" crossorigin><script id="yun-config">
     window.Yun = {}
     window.CONFIG = {"hostname":"aria-geng.github.io","root":"/_myBlog/","title":"云游君的小站","version":"1.10.9","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms"},"anonymous_image":"https://cdn.yunyoujun.cn/img/avatar/none.jpg","say":{"api":"https://el-bot-api.vercel.app/api/words/young"},"fireworks":{"colors":null},"vendors":{"host":"https://fastly.jsdelivr.net/npm/","darken":"https://fastly.jsdelivr.net/npm/darken@1.5.0"}};
-  </script><link rel="stylesheet" href="/_myBlog/css/hexo-theme-yun.css"><script src="/_myBlog/js/hexo-theme-yun.js" type="module"></script><meta name="description" content="JavaScript数据类型 6 种基本类型，可以使用 typeof 判断 undefined、Number、Boolean、String、Symbol BigInt：BigInt 是通过在整数末尾附加 n 或调用构造函数来创建的。   null，和其上六种属于属于原始值 Object（引用类型） Array、Map、WeakMap、Set、WeakSet、Date    基本数据类型与引用类型的">
+  </script><link rel="stylesheet" href="/_myBlog/css/hexo-theme-yun.css"><script src="/_myBlog/js/hexo-theme-yun.js" type="module"></script><meta name="description" content="JavaScriptC++、Java、JavaScript的区别 静态类型&#x2F;动态类型 编译还是运行的时候知道变量的类型  编译型&#x2F;解释型  c++，编译型 js，解释型 java，编译成字节码再用解释器    数据类型 6 种基本类型，可以使用 typeof 判断 undefined、Number、Boolean、String、Symbol BigInt：BigInt 是通过在整数末尾附加 n 或">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript|TypeScript">
 <meta property="og:url" content="https://aria-geng.github.io/_myBlog/2023/04/30/JavaScript|TypeScript/index.html">
 <meta property="og:site_name" content="Aria&#39;s NoteBook">
-<meta property="og:description" content="JavaScript数据类型 6 种基本类型，可以使用 typeof 判断 undefined、Number、Boolean、String、Symbol BigInt：BigInt 是通过在整数末尾附加 n 或调用构造函数来创建的。   null，和其上六种属于属于原始值 Object（引用类型） Array、Map、WeakMap、Set、WeakSet、Date    基本数据类型与引用类型的">
+<meta property="og:description" content="JavaScriptC++、Java、JavaScript的区别 静态类型&#x2F;动态类型 编译还是运行的时候知道变量的类型  编译型&#x2F;解释型  c++，编译型 js，解释型 java，编译成字节码再用解释器    数据类型 6 种基本类型，可以使用 typeof 判断 undefined、Number、Boolean、String、Symbol BigInt：BigInt 是通过在整数末尾附加 n 或">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-04-29T16:00:02.000Z">
-<meta property="article:modified_time" content="2023-05-01T17:50:18.646Z">
+<meta property="article:modified_time" content="2023-05-03T13:56:32.741Z">
 <meta property="article:author" content="Aria">
 <meta name="twitter:card" content="summary"><script>(function() {
   if (CONFIG.mode !== 'auto') return
@@ -35,7 +35,19 @@ IconifyProviders = {
     // Wait for 1 second before switching API hosts
     rotate: 1000,
   },
-};</script><script defer src="https://fastly.jsdelivr.net/npm/animejs@latest"></script><script defer src="/_myBlog/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/_myBlog/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="Table of Contents"><span class="icon iconify" data-icon="ri:list-ordered"></span></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="Overview"><span class="icon iconify" data-icon="ri:passport-line"></span></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/_myBlog/about/" title="Aria"><img width="96" loading="lazy" src="/_myBlog/yun.png" alt="Aria"></a><div class="site-author-name"><a href="/_myBlog/about/">Aria</a></div><span class="site-name">Aria's NoteBook</span><sub class="site-subtitle"></sub><div class="site-description"></div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/_myBlog/" title="Home"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:home-4-line"></span></span></a><div class="site-state-item"><a href="/_myBlog/archives/" title="Archives"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:archive-line"></span></span><span class="site-state-item-count">3</span></a></div><div class="site-state-item"><a href="/_myBlog/categories/" title="Categories"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:folder-2-line"></span></span><span class="site-state-item-count">0</span></a></div><div class="site-state-item"><a href="/_myBlog/tags/" title="Tags"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="site-state-item-count">0</span></a></div><a class="site-state-item hty-icon-button" target="_blank" rel="noopener" href="https://yun.yunyoujun.cn" title="文档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:settings-line"></span></span></a></nav><hr style="margin-bottom:0.5rem"><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/_myBlog/links/" title="我的小伙伴们" style="color:dodgerblue"><span class="icon iconify" data-icon="ri:genderless-line"></span></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><span class="icon iconify" data-icon="ri:contrast-2-line"></span></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript"><span class="toc-number">1.</span> <span class="toc-text">JavaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.2.</span> <span class="toc-text">基本数据类型与引用类型的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.</span> <span class="toc-text">数组方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B9%E6%B3%95"><span class="toc-number">1.4.</span> <span class="toc-text">字符串方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM-%E5%92%8C-BOM%EF%BC%88%E5%92%8C%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%89%EF%BC%88%E9%9D%A2%E8%AF%95%E5%AE%98%E7%B3%BB%E5%88%97-js%E7%B3%BB%E5%88%97%EF%BC%89"><span class="toc-number">1.5.</span> <span class="toc-text">DOM 和 BOM（和常用方法）（面试官系列-js系列）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS%E7%9A%84%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E6%9C%BA%E5%88%B6"><span class="toc-number">1.6.</span> <span class="toc-text">JS的类型转换机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%92%8C-%E5%8C%BA%E5%88%AB%EF%BC%8C%E5%88%86%E5%88%AB%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%BD%BF%E7%94%A8"><span class="toc-number">1.7.</span> <span class="toc-text">&#x3D;&#x3D; 和 &#x3D;&#x3D;&#x3D;区别，分别在什么情况使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D"><span class="toc-number">1.8.</span> <span class="toc-text">深拷贝和浅拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F%E9%97%AD%E5%8C%85%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.9.</span> <span class="toc-text">对闭包的理解？闭包使用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">1.10.</span> <span class="toc-text">对作用域链的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS%E5%8E%9F%E5%9E%8B%E3%80%81%E5%8E%9F%E5%9E%8B%E9%93%BE%E3%80%81%E7%89%B9%E7%82%B9"><span class="toc-number">1.11.</span> <span class="toc-text">JS原型、原型链、特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%BB%A7%E6%89%BF"><span class="toc-number">1.12.</span> <span class="toc-text">JS如何实现继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9this%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">1.13.</span> <span class="toc-text">对this对象的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS%E4%B8%AD%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E5%92%8C%E6%89%A7%E8%A1%8C%E6%A0%88"><span class="toc-number">1.14.</span> <span class="toc-text">JS中执行上下文和执行栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.15.</span> <span class="toc-text">JavaScript中的事件模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#typeof-%E4%B8%8E-instanceof-%E5%8C%BA%E5%88%AB"><span class="toc-number">1.16.</span> <span class="toc-text">typeof 与 instanceof 区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%87%8A%E4%BA%8B%E4%BB%B6%E4%BB%A3%E7%90%86%EF%BC%88%E5%A7%94%E6%89%98%EF%BC%89%E5%92%8C%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%88%E9%9D%A2%E8%AF%95%E5%AE%98%E7%B3%BB%E5%88%97-js%E7%B3%BB%E5%88%97%EF%BC%89"><span class="toc-number">1.17.</span> <span class="toc-text">解释事件代理（委托）和应用场景（面试官系列-js系列）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ES6-%E6%96%B0%E7%89%B9%E6%80%A7"><span class="toc-number">1.18.</span> <span class="toc-text">ES6 新特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%B0%BE%E9%80%92%E5%BD%92%E7%9A%84%E7%90%86%E8%A7%A3%E5%92%8C%E5%BA%94%E7%94%A8"><span class="toc-number">1.19.</span> <span class="toc-text">对尾递归的理解和应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS%E4%B8%AD%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-number">1.20.</span> <span class="toc-text">JS中内存泄漏的情况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Async%EF%BC%8Cpromise-%E5%92%8C-generator%EF%BC%8C%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">1.21.</span> <span class="toc-text">Async，promise 和 generator，区别是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#call%E3%80%81apply%E3%80%81bind%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.22.</span> <span class="toc-text">call、apply、bind的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E7%90%86%E8%A7%A3%E5%92%8C%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%88%E9%9D%A2%E8%AF%95%E5%AE%98%E7%B3%BB%E5%88%97-js%E7%B3%BB%E5%88%97%EF%BC%89"><span class="toc-number">1.23.</span> <span class="toc-text">对正则表达式的理解和应用场景（面试官系列-js系列）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">1.24.</span> <span class="toc-text">对事件循环的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E7%89%B9%E7%82%B9"><span class="toc-number">1.25.</span> <span class="toc-text">箭头函数特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#new-%E6%93%8D%E4%BD%9C%E7%AC%A6%E5%81%9A%E4%BA%86%E5%93%AA%E4%BA%9B%E4%BA%8B%EF%BC%9F%E6%89%8B%E5%86%99new%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-number">1.26.</span> <span class="toc-text">new 操作符做了哪些事？手写new操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ajax%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E7%8E%B0%EF%BC%88%E5%B0%81%E8%A3%85%EF%BC%89%EF%BC%88%E9%9D%A2%E8%AF%95%E5%AE%98%E7%B3%BB%E5%88%97-js%E7%B3%BB%E5%88%97%EF%BC%89"><span class="toc-number">1.27.</span> <span class="toc-text">ajax的原理和实现（封装）（面试官系列-js系列）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6%EF%BC%88%E5%AE%8F%E4%BB%BB%E5%8A%A1%E3%80%81%E5%BE%AE%E4%BB%BB%E5%8A%A1%EF%BC%89"><span class="toc-number">1.28.</span> <span class="toc-text">事件循环机制（宏任务、微任务）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95"><span class="toc-number">1.29.</span> <span class="toc-text">数组去重方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA"><span class="toc-number">1.30.</span> <span class="toc-text">暂时性死区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E9%97%AE%E9%A2%98"><span class="toc-number">1.31.</span> <span class="toc-text">同步异步执行问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%BD%AE%E6%92%AD"><span class="toc-number">1.32.</span> <span class="toc-text">设置轮播</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Typescript"><span class="toc-number">2.</span> <span class="toc-text">Typescript</span></a></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#0078E7;"><link itemprop="mainEntityOfPage" href="https://aria-geng.github.io/_myBlog/_myBlog/2023/04/30/JavaScript%7CTypeScript/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Aria"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Aria's NoteBook"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">JavaScript|TypeScript</h1><div class="post-meta"><div class="post-time"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="Created: 2023-04-30 00:00:02" itemprop="dateCreated datePublished" datetime="2023-04-30T00:00:02+08:00">2023-04-30</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-2-line"></span></span> <time title="Modified: 2023-05-02 01:50:18" itemprop="dateModified" datetime="2023-05-02T01:50:18+08:00">2023-05-02</time></div><div class="post-classify"></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
+};</script><script defer src="https://fastly.jsdelivr.net/npm/animejs@latest"></script><script defer src="/_myBlog/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/_myBlog/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="Table of Contents"><span class="icon iconify" data-icon="ri:list-ordered"></span></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="Overview"><span class="icon iconify" data-icon="ri:passport-line"></span></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/_myBlog/about/" title="Aria"><img width="96" loading="lazy" src="/_myBlog/yun.png" alt="Aria"></a><div class="site-author-name"><a href="/_myBlog/about/">Aria</a></div><span class="site-name">Aria's NoteBook</span><sub class="site-subtitle"></sub><div class="site-description"></div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/_myBlog/" title="Home"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:home-4-line"></span></span></a><div class="site-state-item"><a href="/_myBlog/archives/" title="Archives"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:archive-line"></span></span><span class="site-state-item-count">5</span></a></div><div class="site-state-item"><a href="/_myBlog/categories/" title="Categories"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:folder-2-line"></span></span><span class="site-state-item-count">0</span></a></div><div class="site-state-item"><a href="/_myBlog/tags/" title="Tags"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="site-state-item-count">0</span></a></div><a class="site-state-item hty-icon-button" target="_blank" rel="noopener" href="https://yun.yunyoujun.cn" title="文档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:settings-line"></span></span></a></nav><hr style="margin-bottom:0.5rem"><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/_myBlog/links/" title="我的小伙伴们" style="color:dodgerblue"><span class="icon iconify" data-icon="ri:genderless-line"></span></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><span class="icon iconify" data-icon="ri:contrast-2-line"></span></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript"><span class="toc-number">1.</span> <span class="toc-text">JavaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E3%80%81Java%E3%80%81JavaScript%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.1.</span> <span class="toc-text">C++、Java、JavaScript的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.3.</span> <span class="toc-text">基本数据类型与引用类型的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95"><span class="toc-number">1.4.</span> <span class="toc-text">数组方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B9%E6%B3%95"><span class="toc-number">1.5.</span> <span class="toc-text">字符串方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E6%9C%BA%E5%88%B6"><span class="toc-number">1.6.</span> <span class="toc-text">类型转换机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%92%8C-%E5%8C%BA%E5%88%AB%EF%BC%8C%E5%88%86%E5%88%AB%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%BD%BF%E7%94%A8"><span class="toc-number">1.7.</span> <span class="toc-text">&#x3D;&#x3D; 和 &#x3D;&#x3D;&#x3D;区别，分别在什么情况使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D"><span class="toc-number">1.8.</span> <span class="toc-text">深拷贝和浅拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AD%E5%8C%85%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F%E9%97%AD%E5%8C%85%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.9.</span> <span class="toc-text">闭包的理解？闭包使用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">1.10.</span> <span class="toc-text">作用域链的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E3%80%81%E5%8E%9F%E5%9E%8B%E9%93%BE%E3%80%81%E7%89%B9%E7%82%B9"><span class="toc-number">1.11.</span> <span class="toc-text">原型、原型链、特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.12.</span> <span class="toc-text">继承实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">1.13.</span> <span class="toc-text">this对象的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E5%92%8C%E6%89%A7%E8%A1%8C%E6%A0%88"><span class="toc-number">1.14.</span> <span class="toc-text">执行上下文和执行栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.15.</span> <span class="toc-text">事件模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#typeof-%E4%B8%8E-instanceof-%E5%8C%BA%E5%88%AB"><span class="toc-number">1.16.</span> <span class="toc-text">typeof 与 instanceof 区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ES6-%E6%96%B0%E7%89%B9%E6%80%A7"><span class="toc-number">1.17.</span> <span class="toc-text">ES6 新特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%BE%E9%80%92%E5%BD%92%E7%9A%84%E7%90%86%E8%A7%A3%E5%92%8C%E5%BA%94%E7%94%A8"><span class="toc-number">1.18.</span> <span class="toc-text">尾递归的理解和应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-number">1.19.</span> <span class="toc-text">内存泄漏的情况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6"><span class="toc-number">1.20.</span> <span class="toc-text">垃圾回收</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%EF%BC%88cookie%E3%80%81session%EF%BC%8CindexedDB%EF%BC%89%E5%8C%BA%E5%88%AB%E5%92%8C%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.21.</span> <span class="toc-text">本地存储方式（cookie、session，indexedDB）区别和应用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">1.22.</span> <span class="toc-text">函数式编程的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%BC%93%E5%AD%98%E5%AE%9E%E7%8E%B0%E5%92%8C%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.23.</span> <span class="toc-text">函数缓存实现和应用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%880-1-0-2-0-3%EF%BC%89"><span class="toc-number">1.24.</span> <span class="toc-text">数字精度丢失和解决方案（0.1+0.2&#x3D;&#x3D;&#x3D;0.3）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81%E3%80%81%E5%8C%BA%E5%88%AB%E3%80%81%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.25.</span> <span class="toc-text">防抖和节流、区别、实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#async%EF%BC%8Cpromise-%E5%92%8C-generator%EF%BC%8C%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">1.26.</span> <span class="toc-text">async，promise 和 generator，区别是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#defer%E5%92%8Casync%E7%9A%84%E5%85%B1%E5%90%8C%E7%82%B9%E5%92%8C%E5%8C%BA%E5%88%AB"><span class="toc-number">1.27.</span> <span class="toc-text">defer和async的共同点和区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">1.28.</span> <span class="toc-text">事件循环的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#call%E3%80%81apply%E3%80%81bind%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.29.</span> <span class="toc-text">call、apply、bind的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E7%89%B9%E7%82%B9"><span class="toc-number">1.30.</span> <span class="toc-text">箭头函数特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#new-%E6%93%8D%E4%BD%9C%E7%AC%A6%E5%81%9A%E4%BA%86%E5%93%AA%E4%BA%9B%E4%BA%8B%EF%BC%9F%E6%89%8B%E5%86%99new%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-number">1.31.</span> <span class="toc-text">new 操作符做了哪些事？手写new操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6%EF%BC%88%E5%AE%8F%E4%BB%BB%E5%8A%A1%E3%80%81%E5%BE%AE%E4%BB%BB%E5%8A%A1%EF%BC%89"><span class="toc-number">1.32.</span> <span class="toc-text">事件循环机制（宏任务、微任务）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95"><span class="toc-number">1.33.</span> <span class="toc-text">数组去重方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA"><span class="toc-number">1.34.</span> <span class="toc-text">暂时性死区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E9%97%AE%E9%A2%98"><span class="toc-number">1.35.</span> <span class="toc-text">同步异步执行问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Virtual-dom"><span class="toc-number">1.36.</span> <span class="toc-text">Virtual dom</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%BD%AE%E6%92%AD"><span class="toc-number">1.37.</span> <span class="toc-text">设置轮播</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E5%AE%98%E7%B3%BB%E5%88%97-js%E7%B3%BB%E5%88%97"><span class="toc-number">2.</span> <span class="toc-text">面试官系列-js系列</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM-%E5%92%8C-BOM%EF%BC%88%E5%92%8C%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">DOM 和 BOM（和常用方法）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%87%8A%E4%BA%8B%E4%BB%B6%E4%BB%A3%E7%90%86%EF%BC%88%E5%A7%94%E6%89%98%EF%BC%89%E5%92%8C%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%88%E9%9D%A2%E8%AF%95%E5%AE%98%E7%B3%BB%E5%88%97-js%E7%B3%BB%E5%88%97%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">解释事件代理（委托）和应用场景（面试官系列-js系列）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E6%98%AF%E5%90%A6%E5%9C%A8%E5%8F%AF%E8%A7%86%E5%8C%BA%E5%9F%9F%E4%B8%AD%EF%BC%9F"><span class="toc-number">2.3.</span> <span class="toc-text">如何判断一个元素是否在可视区域中？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E7%90%86%E8%A7%A3%E5%92%8C%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">2.4.</span> <span class="toc-text">正则表达式的理解和应用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ajax%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E7%8E%B0%EF%BC%88%E7%94%A8promise%E5%B0%81%E8%A3%85%EF%BC%89"><span class="toc-number">2.5.</span> <span class="toc-text">ajax的原理和实现（用promise封装）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Proxy%E5%92%8CObject-defineProperty%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E7%89%B9%E7%82%B9"><span class="toc-number">2.6.</span> <span class="toc-text">Proxy和Object.defineProperty的区别和特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD%EF%BC%8C%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0%EF%BC%9F"><span class="toc-number">2.7.</span> <span class="toc-text">如何实现上拉加载，下拉刷新？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95%EF%BC%88SSO%EF%BC%89%E5%92%8C%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.8.</span> <span class="toc-text">单点登录（SSO）和实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web%E5%B8%B8%E8%A7%81%E6%94%BB%E5%87%BB%E6%96%B9%E5%BC%8F%E5%92%8C%E9%98%B2%E5%BE%A1%E6%8E%AA%E6%96%BD"><span class="toc-number">2.9.</span> <span class="toc-text">Web常见攻击方式和防御措施</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#XSS"><span class="toc-number">2.9.1.</span> <span class="toc-text">XSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSRF"><span class="toc-number">2.9.2.</span> <span class="toc-text">CSRF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB"><span class="toc-number">2.9.3.</span> <span class="toc-text">SQL注入攻击</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Typescript"><span class="toc-number">3.</span> <span class="toc-text">Typescript</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E5%AE%98%E7%B3%BB%E5%88%97TS%E7%B3%BB%E5%88%97"><span class="toc-number">3.1.</span> <span class="toc-text">面试官系列TS系列</span></a></li></ol></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#0078E7;"><link itemprop="mainEntityOfPage" href="https://aria-geng.github.io/_myBlog/_myBlog/2023/04/30/JavaScript%7CTypeScript/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Aria"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Aria's NoteBook"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">JavaScript|TypeScript</h1><div class="post-meta"><div class="post-time"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="Created: 2023-04-30 00:00:02" itemprop="dateCreated datePublished" datetime="2023-04-30T00:00:02+08:00">2023-04-30</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-2-line"></span></span> <time title="Modified: 2023-05-03 21:56:32" itemprop="dateModified" datetime="2023-05-03T21:56:32+08:00">2023-05-03</time></div><div class="post-classify"></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h2 id="C-、Java、JavaScript的区别"><a href="#C-、Java、JavaScript的区别" class="headerlink" title="C++、Java、JavaScript的区别"></a>C++、Java、JavaScript的区别</h2><ul>
+<li><p>静态类型/动态类型</p>
+<p>编译还是运行的时候知道变量的类型</p>
+</li>
+<li><p>编译型/解释型</p>
+<ul>
+<li>c++，编译型</li>
+<li>js，解释型</li>
+<li>java，编译成字节码再用解释器</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
 <li>6 种基本类型，可以使用 typeof 判断<ul>
 <li>undefined、Number、Boolean、String、Symbol</li>
 <li>BigInt：BigInt 是通过在整数末尾附加 <code>n</code> 或调用构造函数来创建的。</li>
@@ -176,11 +188,7 @@ IconifyProviders = {
 </ul>
 </li>
 </ul>
-<h2 id="DOM-和-BOM（和常用方法）（面试官系列-js系列）"><a href="#DOM-和-BOM（和常用方法）（面试官系列-js系列）" class="headerlink" title="DOM 和 BOM（和常用方法）（面试官系列-js系列）"></a>DOM 和 BOM（和常用方法）（面试官系列-js系列）</h2><ul>
-<li>DOM：文档对象模型，把文档当做一个对象，主要定义处理网页内容的方法和接口。</li>
-<li>BOM：浏览器对象模型，把浏览器当做一个对象来对待，主要定义与浏览器进行交互的方法和接口。比如如何进行页面的后退，前进，刷新，浏览器的窗口发生变化，滚动条的滚动，以及获取客户的一些信息如：浏览器品牌版本，屏幕分辨率</li>
-</ul>
-<h2 id="JS的类型转换机制"><a href="#JS的类型转换机制" class="headerlink" title="JS的类型转换机制"></a>JS的类型转换机制</h2><ul>
+<h2 id="类型转换机制"><a href="#类型转换机制" class="headerlink" title="类型转换机制"></a>类型转换机制</h2><ul>
 <li>背景：类型声明的时候只有一种数据类型，只有到运行期间才会确定当前类型。虽然变量的数据类型不确定，但是各种运算符对数据类型是有要求的，如果运算子的类型与预期不符合，就会触发类型转换机制。常见的类型转换有：<ul>
 <li>强制转换（显示转换）<ul>
 <li>Number()将任意类型的值转化为数值。只要有一个字符无法转成数值，整个字符串就会被转为NaN</li>
@@ -265,7 +273,7 @@ IconifyProviders = {
 </ul>
 </li>
 </ul>
-<h2 id="对闭包的理解？闭包使用场景"><a href="#对闭包的理解？闭包使用场景" class="headerlink" title="对闭包的理解？闭包使用场景"></a>对闭包的理解？闭包使用场景</h2><ul>
+<h2 id="闭包的理解？闭包使用场景"><a href="#闭包的理解？闭包使用场景" class="headerlink" title="闭包的理解？闭包使用场景"></a>闭包的理解？闭包使用场景</h2><ul>
 <li>是什么<ul>
 <li>一个函数和对词法环境的引用捆绑在一起的组合就是闭包（closure），可以在一个内层函数中访问到其外层函数的作用域。<code>JavaScript</code>中每创建一个函数，闭包同时创建，作为函数内部与外部连接起来的一座桥梁。</li>
 </ul>
@@ -280,12 +288,12 @@ IconifyProviders = {
 </ul>
 </li>
 </ul>
-<h2 id="对作用域链的理解"><a href="#对作用域链的理解" class="headerlink" title="对作用域链的理解"></a>对作用域链的理解</h2><ul>
+<h2 id="作用域链的理解"><a href="#作用域链的理解" class="headerlink" title="作用域链的理解"></a>作用域链的理解</h2><ul>
 <li>作用域：变量（变量作用域又称上下文）和函数生效（能被访问）的区域或集合，包括全局作用域，函数作用域，块极作用域</li>
 <li>词法作用域，又叫静态作用域：变量被创建时就确定好的。<code>JavaScript</code> 遵循的是词法作用域。</li>
 <li><strong>作用域链</strong>：当在<code>Javascript</code>中使用一个变量的时候，首先<code>Javascript</code>引擎会尝试在当前作用域下去寻找，如果没找到，再到它的上层作用域寻找，以此类推直到找到变量或是已经到了全局作用域。如果在全局作用域里仍然找不到，就会在全局范围内隐式声明(非严格模式下)或是直接报错。</li>
 </ul>
-<h2 id="JS原型、原型链、特点"><a href="#JS原型、原型链、特点" class="headerlink" title="JS原型、原型链、特点"></a>JS原型、原型链、特点</h2><ul>
+<h2 id="原型、原型链、特点"><a href="#原型、原型链、特点" class="headerlink" title="原型、原型链、特点"></a>原型、原型链、特点</h2><ul>
 <li><code>JavaScript</code> 是一种基于原型的语言，每个对象都有一个原型对象。当访问一个对象的属性时，不仅在对象上搜寻，还会搜寻对象的原型和原型的原型，层层向上搜索，直到找到一个名字匹配的属性或到达原型链的末尾。这些属性和方法定义在Object的构造器函数（constructor functions）之上的<code>prototype</code>属性上。</li>
 <li>原型链：原型对象也可能有原型，并且继承方法和属性，以此类推。这种关系常叫原型链 (prototype chain)。在对象实例和它的构造器之间建立一个链接（是<code>__proto__</code>属性，从构造函数的<code>prototype</code>属性派生的），通过原型链在构造器中找到这些属性和方法。</li>
 <li>特点<ul>
@@ -297,7 +305,7 @@ IconifyProviders = {
 </ul>
 </li>
 </ul>
-<h2 id="JS如何实现继承"><a href="#JS如何实现继承" class="headerlink" title="JS如何实现继承"></a>JS如何实现继承</h2><ul>
+<h2 id="继承实现"><a href="#继承实现" class="headerlink" title="继承实现"></a>继承实现</h2><ul>
 <li>继承是面向对象软件技术的三大特点之一。</li>
 <li>优点<ul>
 <li>可以使子类具有父类的各种属性和方法，不需要再次编写相同代码</li>
@@ -314,7 +322,7 @@ IconifyProviders = {
 </ul>
 </li>
 </ul>
-<h2 id="对this对象的理解"><a href="#对this对象的理解" class="headerlink" title="对this对象的理解"></a>对this对象的理解</h2><ul>
+<h2 id="this对象的理解"><a href="#this对象的理解" class="headerlink" title="this对象的理解"></a>this对象的理解</h2><ul>
 <li>JS中this对象是运行时绑定，函数的调用方式决定<code>this</code> 的值。<code>this</code> 是函数运行时自动生成的一个内部对象，只能在函数内部使用，总是指向调用它的对象。函数执行过程中，<code>this</code>一旦被确定了，就不可以再更改。</li>
 <li>绑定规则<ul>
 <li>默认绑定<ul>
@@ -337,7 +345,7 @@ IconifyProviders = {
 </li>
 <li>优先级：new绑定优先级 &gt; 显示绑定优先级 &gt; 隐式绑定优先级 &gt; 默认绑定优先级</li>
 </ul>
-<h2 id="JS中执行上下文和执行栈"><a href="#JS中执行上下文和执行栈" class="headerlink" title="JS中执行上下文和执行栈"></a>JS中执行上下文和执行栈</h2><ul>
+<h2 id="执行上下文和执行栈"><a href="#执行上下文和执行栈" class="headerlink" title="执行上下文和执行栈"></a>执行上下文和执行栈</h2><ul>
 <li><p>执行上下文是一种对<code>Javascript</code>代码执行环境的抽象概念</p>
 <ul>
 <li><p>类型</p>
@@ -378,7 +386,7 @@ IconifyProviders = {
 </ul>
 </li>
 </ul>
-<h2 id="JavaScript中的事件模型"><a href="#JavaScript中的事件模型" class="headerlink" title="JavaScript中的事件模型"></a>JavaScript中的事件模型</h2><ul>
+<h2 id="事件模型"><a href="#事件模型" class="headerlink" title="事件模型"></a>事件模型</h2><ul>
 <li>事件<ul>
 <li><code>HTML</code>文档或者浏览器中发生的一种交互操作，使网页具备互动性，常见的有加载事件、鼠标事件、自定义事件等。</li>
 </ul>
@@ -457,25 +465,6 @@ IconifyProviders = {
 </ul>
 </li>
 </ul>
-<h2 id="解释事件代理（委托）和应用场景（面试官系列-js系列）"><a href="#解释事件代理（委托）和应用场景（面试官系列-js系列）" class="headerlink" title="解释事件代理（委托）和应用场景（面试官系列-js系列）"></a>解释事件代理（委托）和应用场景（面试官系列-js系列）</h2><ul>
-<li>事件代理：把一个元素响应事件（<code>click</code>、<code>keydown</code>……）的函数委托到另一个元素，真正绑定事件的是外层元素，而不是目标元素。当事件响应到目标元素上时，会通过事件冒泡机制触发它的外层元素绑定事件上，然后在外层元素上执行函数。</li>
-<li>应用场景<ul>
-<li>如果我们有一个列表，列表之中有大量的列表项，我们需要在点击列表项的时候响应一个事件。如果给每个列表项都绑定一个函数，那对于内存消耗是非常大的。这时候就可以事件委托，把点击事件绑定在父级元素<code>ul</code>上面，然后执行事件的时候再去匹配目标元素。</li>
-<li>但是如果用户能够随时动态的增加或者去除列表项元素，每一次改变的时候都需要重新给新增的元素绑定事件，给即将删去的元素解绑事件。如果用了事件委托就不会这么麻烦，因为事件是绑定在父层的，和目标元素的增减是没有关系的，执行到目标元素是在真正响应执行事件函数的过程中去匹配的。</li>
-<li>适合事件委托的事件有：<code>click</code>，<code>mousedown</code>，<code>mouseup</code>，<code>keydown</code>，<code>keyup</code>，<code>keypress</code></li>
-</ul>
-</li>
-<li>优点<ul>
-<li>减少整个页面所需的内存，提升整体性能</li>
-<li>动态绑定，减少重复工作</li>
-</ul>
-</li>
-<li>局限性：<ul>
-<li><code>focus</code>、<code>blur</code>这些事件没有事件冒泡机制，所以无法进行委托绑定事件</li>
-<li><code>mousemove</code>、<code>mouseout</code>这样的事件，虽然有事件冒泡，但是只能不断通过位置去计算定位，对性能消耗高，因此也是不适合于事件委托的</li>
-</ul>
-</li>
-</ul>
 <h2 id="ES6-新特性"><a href="#ES6-新特性" class="headerlink" title="ES6 新特性"></a>ES6 新特性</h2><ul>
 <li>在变量声明方面有：let, const</li>
 <li>面向对象编程有 语法糖 class</li>
@@ -487,15 +476,25 @@ IconifyProviders = {
 <li>解构赋值和三点表达式</li>
 <li>等等……</li>
 </ul>
-<h2 id="对尾递归的理解和应用"><a href="#对尾递归的理解和应用" class="headerlink" title="对尾递归的理解和应用"></a>对尾递归的理解和应用</h2><ul>
+<h2 id="尾递归的理解和应用"><a href="#尾递归的理解和应用" class="headerlink" title="尾递归的理解和应用"></a>尾递归的理解和应用</h2><ul>
 <li>尾递归是在函数尾位置调用自身，是递归的一种特殊情形。在尾部调用的是函数自身；可通过优化，使计算仅占用常量栈空间。在递归调用的过程中系统为每一层的返回点、局部量等开辟了栈来存储，递归次数过多容易造成栈溢出，可以使用尾递归，一个函数中所有递归形式的调用都出现在函数的末尾，对于尾递归来说，由于只存在一个调用记录，所以永远不会发生”栈溢出”错误。</li>
 <li>例如：尾递归函数</li>
 </ul>
-<h2 id="JS中内存泄漏的情况"><a href="#JS中内存泄漏的情况" class="headerlink" title="JS中内存泄漏的情况"></a>JS中内存泄漏的情况</h2><ul>
+<h2 id="内存泄漏的情况"><a href="#内存泄漏的情况" class="headerlink" title="内存泄漏的情况"></a>内存泄漏的情况</h2><ul>
 <li>内存泄漏（Memory leak）是由于疏忽或错误导致在释放内存之前就失去了对这段内存的控制，没能释放不使用的内存，造成了内存浪费。对于持续运行的服务进程，必须及时释放不再用到的内存。否则内存占用越来越高，影响系统性能甚至导致进程崩溃。</li>
+</ul>
+<h2 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h2><ul>
 <li>Javascript 具有自动垃圾回收机制，执行环境负责管理代码执行过程中使用的内存，垃圾收集器周期性找出不使用的变量，然后释放内存，有两种实现方式<ul>
-<li>标记清除：变量进入执行环境时标记“进入”，离开环境时，则将其标记为“离开“。垃圾回收程序运行的时候，会标记内存中存储的所有变量。然后，它会将所有在上下文中的变量，以及被在上下文中的变量引用的变量的标记去掉，之后再被加上标记的变量就是待删除的了，任何上下文中的变量都访问不到。随后垃圾回收程序做一次内存清理，销毁带标记的所有值并收回内存。</li>
-<li>引用计数：语言引擎的”引用表”，保存了内存里面所有的资源（通常是各种值）的引用次数。如果一个值的引用次数是<code>0</code>，就表示这个值不再用到，可以将这块内存释放。</li>
+<li>标记清除<ul>
+<li>变量进入执行环境时标记“进入”，离开环境时，则将其标记为“离开“。垃圾回收程序运行的时候，会标记内存中存储的所有变量。然后，它会将所有在上下文中的变量，以及被在上下文中的变量引用的变量的标记去掉，之后再被加上标记的变量就是待删除的了，任何上下文中的变量都访问不到。随后垃圾回收程序做一次内存清理，销毁带标记的所有值并收回内存。</li>
+<li>可以即刻回收垃圾，但是计数过程过于复杂，并且循环引用无法回收。</li>
+</ul>
+</li>
+<li>引用计数<ul>
+<li>语言引擎的”引用表”，保存了内存里面所有的资源（通常是各种值）的引用次数。如果一个值的引用次数是<code>0</code>，就表示这个值不再用到，可以将这块内存释放。</li>
+<li>实现简单，但是会造成大量的内存碎片。</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>常见的内存泄漏<ul>
@@ -505,13 +504,272 @@ IconifyProviders = {
 </ul>
 </li>
 </ul>
-<h2 id="Async，promise-和-generator，区别是什么"><a href="#Async，promise-和-generator，区别是什么" class="headerlink" title="Async，promise 和 generator，区别是什么"></a>Async，promise 和 generator，区别是什么</h2><ul>
+<h2 id="本地存储方式（cookie、session，indexedDB）区别和应用场景"><a href="#本地存储方式（cookie、session，indexedDB）区别和应用场景" class="headerlink" title="本地存储方式（cookie、session，indexedDB）区别和应用场景"></a>本地存储方式（cookie、session，indexedDB）区别和应用场景</h2><ul>
+<li><p>cookie</p>
+<ul>
+<li>一般不超过 4KB 的「小型文本文件」，是网站为辨别用户身份储存在用户本地终端上的数据，解决 <code>HTTP</code>无状态导致的问题。由一个名称（Name）、一个值（Value）和其它几个用于控制 <code>cookie</code>有效期、安全性、使用范围的可选属性组成，在每次请求中被发送，需要使用 <code>HTTPS</code>并加密，它保存的信息很容易被窃取，导致安全风险。例子，在用 <code>cookie</code>保持登录态的网站上，如果 <code>cookie</code>被窃取，他人很容易利用你的 <code>cookie</code>来假扮成你登录网站。</li>
+<li>常用属性<ul>
+<li>Expires 设置 Cookie 的过期时间</li>
+<li>Max-Age 设置在 Cookie 失效之前需要经过的秒数（优先级比<code>Expires</code>高）</li>
+<li><code>Domain</code>指定 <code>Cookie</code> 可以送达的主机名</li>
+<li><code>Path</code>指定了一个 <code>URL</code>路径，必须出现在要请求的资源的路径中才可以发送 <code>Cookie</code> 首部</li>
+<li>标记为 <code>Secure</code>的 <code>Cookie</code>只应通过被<code>HTTPS</code>协议加密过的请求发送给服务端</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>sessionStorage</p>
+<ul>
+<li>一旦页面（会话）关闭，<code>sessionStorage</code> 将会删除数据</li>
+</ul>
+</li>
+<li><p>localStorage（<code>HTML5</code>新方法，兼容IE8及以上浏览器）</p>
+<ul>
+<li>特点<ul>
+<li>生命周期：持久化的本地存储，除非主动删除数据，否则数据永远不会过期</li>
+<li>存储的信息在同一域中是共享的</li>
+<li>当本页操作（新增、修改、删除）了<code>localStorage</code>的时候，本页面不会触发<code>storage</code>事件,但是别的页面会触发<code>storage</code>事件。</li>
+<li>大小：5M（跟浏览器厂商有关系）</li>
+<li><code>localStorage</code>本质上是对字符串的读取，如果存储内容多的话会消耗内存空间，会导致页面变卡</li>
+<li>受同源策略的限制</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>无法像<code>Cookie</code>一样设置过期时间</li>
+<li>只能存入字符串，无法直接存对象</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>cookie、sessionStorage、localStorage的区别</p>
+<ul>
+<li>存储大小：<code>cookie</code>数据大小不能超过<code>4k</code>，<code>sessionStorage</code>和<code>localStorage</code>有存储大小的限制，但比<code>cookie</code>大得多，可以达到5M或更大。</li>
+<li>有效时间：<code>localStorage</code>存储持久数据，浏览器关闭后数据不丢失，除非主动删除数据； <code>sessionStorage</code>数据在当前浏览器窗口关闭后自动删除；<code>cookie</code>设置的<code>cookie</code>过期时间之前一直有效，即使窗口或浏览器关闭</li>
+<li>数据与服务器之间的交互方式，<code>cookie</code>的数据自动传递到服务器，服务器端也可以写<code>cookie</code>到客户端； <code>sessionStorage</code>和<code>localStorage</code>不会自动把数据发给服务器，仅在本地保存</li>
+</ul>
+</li>
+<li><p>应用场景</p>
+<ul>
+<li>标记用户与跟踪用户行为的情况，推荐使用<code>cookie</code></li>
+<li>适合长期保存在本地的数据（令牌），推荐使用<code>localStorage</code></li>
+<li>敏感账号一次性登录，推荐使用<code>sessionStorage</code></li>
+<li>存储大量数据的情况、在线文档（富文本编辑器）保存编辑历史的情况，推荐使用<code>indexedDB</code></li>
+</ul>
+</li>
+<li><p>indexedDB</p>
+<ul>
+<li>低级API，用于客户端存储大量结构化数据(包括, 文件/ blobs)。用索引来实现对该数据的高性能搜索。</li>
+<li>优点<ul>
+<li>储存量理论上没有上限</li>
+<li>所有操作都是异步的，相比 <code>LocalStorage</code> 同步操作性能更高，尤其是数据量较大时</li>
+<li>原生支持储存<code>JS</code>的对象</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>操作非常繁琐</li>
+<li>本身有一定门槛</li>
+</ul>
+</li>
+<li>操作步骤<ul>
+<li>打开数据库并且开始一个事务</li>
+<li>创建一个 <code>object store</code></li>
+<li>构建一个请求来执行一些数据库操作，像增加或提取数据等。</li>
+<li>通过监听正确类型的 <code>DOM</code> 事件以等待操作完成。</li>
+<li>在操作结果上进行一些操作（可以在 <code>request</code>对象中找到）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="函数式编程的理解"><a href="#函数式编程的理解" class="headerlink" title="函数式编程的理解"></a>函数式编程的理解</h2><ul>
+<li>函数式编程是一种”编程范式”，把过程逻辑写成函数，定义好输入参数，只关心执行结果而非执行过程。<ul>
+<li>主要的编程范式有三种：命令式编程，声明式编程和函数式编程</li>
+<li>纯函数<ul>
+<li>函数式编程需要尽可能提高代码的无状态性和不变性，要使用无副作用的纯函数。</li>
+<li>对给定的输入返还相同输出的函数，所有的数据不可变，即纯函数=无状态+数据不可变</li>
+<li>特性<ul>
+<li>函数内部传入指定的值，就会返回确定唯一的值</li>
+<li>不会造成超出作用域的变化，例如修改全局变量或引用传递的参数</li>
+</ul>
+</li>
+<li>优势<ul>
+<li>可以产生可测试的代码</li>
+<li>不依赖外部环境计算，不会产生副作用，提高函数的复用性</li>
+<li>可读性更强 ，函数不管是否是纯函数，都会有一个语义化的名称，更便于阅读</li>
+<li>可以组装成复杂任务的可能性。符合模块化概念及单一职责原则</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>高阶函数：以函数作为输入或者输出的函数</li>
+<li>柯里化：把一个多参数函数转化成一个嵌套的一元函数<ul>
+<li>让纯函数更纯，每次接受一个参数，松散解耦</li>
+<li>惰性执行</li>
+</ul>
+</li>
+<li>组合与管道：可以把很多小函数组合起来完成更复杂的逻辑</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>更好的管理状态：最大化的减少未知、优化代码、减少出错情况</li>
+<li>更简单的复用：固定输入-&gt;固定输出，没有其他外部变量影响，并且无副作用。代码复用时完全不需要考虑内部实现和外部影响</li>
+<li>更优雅的组合：网页由各个组件组成，一个函数由多个小函数组成的。更强的复用性，带来更强大的组合性。</li>
+<li>隐性好处。减少代码量，提高维护性。</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>性能：函数式编程相对于指令式编程，性能绝对是一个短板，因为对一个方法过度包装产生上下文切换的性能开销</li>
+<li>资源占用：在 JS 中为了实现对象状态的不可变，往往会创建新的对象，对垃圾回收所产生的压力远远超过其他编程方式</li>
+<li>递归陷阱：在函数式编程中，为了实现迭代，通常会采用递归操作</li>
+</ul>
+</li>
+</ul>
+<h2 id="函数缓存实现和应用场景"><a href="#函数缓存实现和应用场景" class="headerlink" title="函数缓存实现和应用场景"></a>函数缓存实现和应用场景</h2><ul>
+<li>函数缓存：将函数运算过的结果进行缓存，本质上就是用空间换时间</li>
+<li>实现：主要依靠闭包、柯里化、高阶函数<ul>
+<li>把参数和对应的结果数据存在一个对象中，调用时判断参数对应的数据是否存在，存在就返回对应的结果数据，否则就返回计算结果</li>
+</ul>
+</li>
+<li>应用场景<ul>
+<li>对昂贵的函数调用执行复杂计算的函数</li>
+<li>具有有限且高度重复输入范围的函数</li>
+<li>具有重复输入值的递归函数</li>
+<li>纯函数，即每次使用特定输入调用时返回相同输出的函数</li>
+</ul>
+</li>
+</ul>
+<h2 id="数字精度丢失和解决方案（0-1-0-2-0-3）"><a href="#数字精度丢失和解决方案（0-1-0-2-0-3）" class="headerlink" title="数字精度丢失和解决方案（0.1+0.2===0.3）"></a>数字精度丢失和解决方案（0.1+0.2===0.3）</h2><ul>
+<li><p>在<code>JavaScript</code>中主流的数值类型是<code>Number</code>，<code>Number</code>采用的是<code>IEEE754</code>规范中64位双精度浮点数编码，可以归一化处理整数和小数，节省存储空间。整数可以轻易转化成十进制或者二进制；浮点数小数点的位置用科学计数法固定。</p>
+</li>
+<li><p>计算机存储双精度浮点数需要先把十进制数转换为二进制的科学记数法的形式，然后计算机以自己的规则{符号位+(指数位+指数偏移量的二进制)+小数部分}存储二进制的科学记数法。因为存储时有位数限制（64位），并且一些十进制的浮点数转换为二进制数时会出现无限循环，造成二进制的舍入操作(0舍1入)，当再转换为十进制时就造成了计算误差</p>
+</li>
+<li><p><code>javascript</code>语言中，0.1 和 0.2 都转化成二进制后再进行运算</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0.00011001100110011001100110011001100110011001100110011010</span> +</span><br><span class="line"><span class="number">0.0011001100110011001100110011001100110011001100110011010</span> =</span><br><span class="line"><span class="number">0.0100110011001100110011001100110011001100110011001100111</span></span><br><span class="line"><span class="comment">// 转成十进制正好是 0.30000000000000004</span></span><br></pre></td></tr></table></figure></li>
+<li><p>解决方法</p>
+<ul>
+<li><p>要展示的时候用 <code>toPrecision</code> 凑整， <code>parseFloat</code> 转成数字</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//封装成方法</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">strip</span>(<span class="params">num, precision = <span class="number">12</span></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> +<span class="built_in">parseFloat</span>(num.<span class="title function_">toPrecision</span>(precision));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>对于运算类操作，如 <code>+-*/</code>，不能使用 <code>toPrecision</code> ，需要把小数转成整数后再运算。</p>
+</li>
+<li><p>使用第三方库，如<code>Math.js</code>、<code>BigDecimal.js</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="防抖和节流、区别、实现"><a href="#防抖和节流、区别、实现" class="headerlink" title="防抖和节流、区别、实现"></a>防抖和节流、区别、实现</h2><ul>
+<li><p>背景：优化高频率执行代码的一种手段。如浏览器的 <code>resize</code>、<code>scroll</code>、<code>keypress</code>、<code>mousemove</code> 等事件在触发时会不断调用绑定在事件上的回调函数，极大地浪费资源，降低性能。为了优化体验，对这类事件限制调用次数，采用 <strong>防抖（debounce）</strong> 和 <strong>节流（throttle）</strong> 的方式。</p>
+</li>
+<li><p>定义</p>
+<ul>
+<li>节流：n秒内只运行一次，若在 n 秒内重复触发，只有一次生效</li>
+<li>防抖：n秒后再执行事件，若在 n 秒内被重复触发，则重新计时</li>
+</ul>
+</li>
+<li><p>相同点</p>
+<ul>
+<li>都可以通过使用 <code>setTimeout</code> 实现</li>
+<li>目的都是降低回调执行频率。节省计算资源</li>
+</ul>
+</li>
+<li><p>不同点</p>
+<ul>
+<li>函数防抖，在一段连续操作结束后，处理回调，利用<code>clearTimeout</code>和 <code>setTimeout</code>实现。函数节流，在一段连续操作中，每一段时间只执行一次，频率较高的事件中使用来提高性能</li>
+<li>函数防抖关注一定时间连续触发的事件，只在最后执行一次，而函数节流一段时间内只执行一次</li>
+</ul>
+</li>
+<li><p>应用场景</p>
+<ul>
+<li>防抖在连续的事件，只需触发一次回调的场景<ul>
+<li>搜索框搜索输入。只需用户最后一次输入完，再发送请求</li>
+<li>手机号、邮箱验证输入检测</li>
+<li>窗口大小<code>resize</code>。只需窗口调整完成后，计算窗口大小。防止重复渲染。</li>
+</ul>
+</li>
+<li>节流在间隔一段时间执行一次回调的场景<ul>
+<li>滚动加载，加载更多或滚到底部监听</li>
+<li>搜索框，搜索联想功能</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>节流</p>
+<ul>
+<li><p>时间戳写法，事件会立即执行，停止触发后没有办法再次执行</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">throttled</span>(<span class="params">fn, delay = <span class="number">500</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> oldtime = <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">...args</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> newtime = <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">        <span class="keyword">if</span> (newtime - oldtime &gt;= delay) &#123;</span><br><span class="line">            fn.<span class="title function_">apply</span>(<span class="literal">null</span>, args)</span><br><span class="line">            oldtime = <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>定时器写法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">throttled</span>(<span class="params">fn, delay = <span class="number">500</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">...args</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!timer) &#123;</span><br><span class="line">            timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args)</span><br><span class="line">                timer = <span class="literal">null</span></span><br><span class="line">            &#125;, delay);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>二者结合</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">throttled</span>(<span class="params">fn, delay</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span></span><br><span class="line">    <span class="keyword">let</span> starttime = <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> curTime = <span class="title class_">Date</span>.<span class="title function_">now</span>() <span class="comment">// 当前时间</span></span><br><span class="line">        <span class="keyword">let</span> remaining = delay - (curTime - starttime)  <span class="comment">// 从上一次到现在，还剩下多少多余时间</span></span><br><span class="line">        <span class="keyword">let</span> context = <span class="variable language_">this</span></span><br><span class="line">        <span class="keyword">let</span> args = <span class="variable language_">arguments</span></span><br><span class="line">        <span class="built_in">clearTimeout</span>(timer)</span><br><span class="line">        <span class="keyword">if</span> (remaining &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">            fn.<span class="title function_">apply</span>(context, args)</span><br><span class="line">            starttime = <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            timer = <span class="built_in">setTimeout</span>(fn, remaining);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>防抖</p>
+<ul>
+<li><p>不支持立即执行</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">func, wait</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timeout;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> context = <span class="variable language_">this</span>; <span class="comment">// 保存this指向</span></span><br><span class="line">        <span class="keyword">let</span> args = <span class="variable language_">arguments</span>; <span class="comment">// 拿到event对象</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">clearTimeout</span>(timeout)</span><br><span class="line">        timeout = <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">            func.<span class="title function_">apply</span>(context, args)</span><br><span class="line">        &#125;, wait);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>如果需要立即执行，加入第三个参数判断</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">func, wait, immediate</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> timeout;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> context = <span class="variable language_">this</span>;</span><br><span class="line">        <span class="keyword">let</span> args = <span class="variable language_">arguments</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (timeout) <span class="built_in">clearTimeout</span>(timeout); <span class="comment">// timeout 不为null</span></span><br><span class="line">        <span class="keyword">if</span> (immediate) &#123;</span><br><span class="line">            <span class="keyword">let</span> callNow = !timeout; <span class="comment">// 第一次会立即执行，以后只有事件执行后才会再次触发</span></span><br><span class="line">            timeout = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">                timeout = <span class="literal">null</span>;</span><br><span class="line">            &#125;, wait)</span><br><span class="line">            <span class="keyword">if</span> (callNow) &#123;</span><br><span class="line">                func.<span class="title function_">apply</span>(context, args)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            timeout = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">                func.<span class="title function_">apply</span>(context, args)</span><br><span class="line">            &#125;, wait);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="async，promise-和-generator，区别是什么"><a href="#async，promise-和-generator，区别是什么" class="headerlink" title="async，promise 和 generator，区别是什么"></a>async，promise 和 generator，区别是什么</h2><ul>
 <li><p>Generator 函数是将函数分步骤阻塞 ，只有主动调用 next() 才能进行下一步</p>
 </li>
-<li><p><code>async</code>和<code>await</code>关键字让我们可以用一种更简洁的方式写出基于<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>的异步行为，而无需刻意地链式调用<code>promise</code>。</p>
-<p>async 函数可能包含 0 个或者多个<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/await"><code>await</code></a>表达式。await 表达式会暂停整个 async 函数的执行进程并出让其控制权，只有当其等待的基于 promise 的异步操作被兑现或被拒绝之后才会恢复进程。promise 的解决值会被当作该 await 表达式的返回值。使用<code>async</code> / <code>await</code>关键字就可以在异步代码中使用普通的<code>try</code> / <code>catch</code>代码块。</p>
-<p>async 函数一定会返回一个 promise 对象。如果一个 async 函数的返回值看起来不是 promise，那么它将会被隐式地包装在一个 promise 中。</p>
-<p><code>async</code>/<code>await</code>的行为就好像搭配使用了生成器和 promise。</p>
+<li><p><code>async</code>和<code>await</code>关键字提供更简洁的方式写出基于<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>的异步行为。async 函数包含 0 个或者多个<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/await"><code>await</code></a>表达式。await 表达式暂停整个 async 函数的执行进程并出让其控制权，只有当其等待的基于 promise 的异步操作被兑现或被拒绝之后才会恢复进程。promise 的解决值会被当作该 await 表达式的返回值。使用<code>async</code> / <code>await</code>关键字就可以在异步代码中使用普通的<code>try</code> / <code>catch</code>代码块。</p>
+</li>
+<li><p><code>async</code>/<code>await</code>的行为就好像搭配使用了生成器和 promise。</p>
+</li>
+</ul>
+<h2 id="defer和async的共同点和区别"><a href="#defer和async的共同点和区别" class="headerlink" title="defer和async的共同点和区别"></a>defer和async的共同点和区别</h2><ul>
+<li><p>defer和async是script标签的两个属性，在不阻塞页⾯⽂档解析的前提下控制脚本的下载和执⾏。</p>
+</li>
+<li><p>页⾯的加载和渲染过程：</p>
+<ol>
+<li>浏览器发送请求，获取HTML⽂档开始从上到下解析并构建DOM；</li>
+<li>构建DOM过程中，如果遇到外联样式声明和脚本声明，会暂停⽂档解析，并开始下载样式脚本和⽂件；</li>
+<li>样式⽂件下载完成后，构建CSSDOM；脚本⽂件下载完成后，解析并执⾏，再继续解析⽂档构建DOM；</li>
+<li>⽂档解析完成后，将DOM和CSSDOM进⾏关联和映射，最后将视图渲染到浏览器窗口</li>
+</ol>
+</li>
+<li><p>在上述过程中，脚本⽂件的下载和执⾏和⽂档解析同步，即它会阻塞⽂档的解析，若控制的不好，会影响⽤户体验，造成页⾯卡顿。</p>
+</li>
+<li><p>因此可以在script中声明defer和async这两个属性。</p>
+</li>
+<li><p>defer：开启新的线程下载脚本⽂件，并使脚本在⽂档解析完成后执⾏。</p>
+</li>
+<li><p>async：HTML5新增属性，⽤于异步下载脚本⽂件，下载完毕⽴即解释执⾏代码。</p>
+</li>
+<li><p>共同点</p>
+<ul>
+<li>都是异步加载外部脚本⽂件</li>
+<li>不会阻塞页⾯的解析</li>
+</ul>
+</li>
+<li><p>区别</p>
+<ul>
+<li>async是异步加载，后续⽂档的加载和渲染与JS脚本加载和执⾏并⾏进⾏，脚本⽂件加载完成⽴即执⾏，不能预测每个脚本的下载和执⾏时间顺序，谁先下载好谁执⾏。</li>
+<li>defer表⽰延迟加载，JS脚本只加载不执⾏，执⾏需要等待⽂档所有元素解析完之后，load和DOMContentLoaded事件之前，有顺序。</li>
+</ul>
+</li>
+<li><p>async 会将其后的函数的返回值封装成一个 Promise 对象， 而 await 会等待这个 Promise 完成，并将其 resolve 的结果返回出来。 如果async函数内没有await, 那么async没有意义的, 全是同步的内容. 注意：只有await往后的才是异步代码</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">getSomeThing</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">            <span class="title function_">resolve</span>(<span class="string">&#x27;获取成功&#x27;</span>)</span><br><span class="line">        &#125;,<span class="number">3000</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="keyword">await</span> <span class="title function_">getSomeThing</span>();</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(a)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">test</span>(); <span class="comment">// 3秒后输出：获取成功</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="事件循环的理解"><a href="#事件循环的理解" class="headerlink" title="事件循环的理解"></a>事件循环的理解</h2><ul>
+<li><code>JavaScript</code>是一门单线程的语言，同一时间内只能做一件事，实现单线程非阻塞的方法就是事件循环</li>
+<li>在<code>JavaScript</code>中，所有的任务都可以分为<ul>
+<li>同步任务：立即执行的任务，一般会直接进入到主线程中执行</li>
+<li>异步任务：比如<code>ajax</code>网络请求，<code>setTimeout</code>定时函数等</li>
+</ul>
+</li>
+<li>同步任务进入主线程，即主执行栈，异步任务进入任务队列，主线程内的任务执行完毕为空，会去任务队列读取对应的任务，推入主线程执行。这个过程的不断重复就事件循环。</li>
+<li>异步任务还可以细分为<ul>
+<li>微任务：一个需要异步执行的函数，执行时机是主函数执行结束之后、当前宏任务结束之前。常见的微任务有：Promise.then、MutaionObserver、process.nextTick</li>
+<li>宏任务：宏任务的时间粒度比较大，执行的时间间隔不能精确控制，常见的宏任务有：script (外层同步代码)、setTimeout/setInterval、UI rendering/UI事件、postMessage、MessageChannel、setImmediate、I/O（Node.js）</li>
+<li>执行顺序：执行一个宏任务，如果遇到微任务就将它放到微任务的事件队列中；当前宏任务执行完成后，会查看微任务的事件队列，然后将里面的所有微任务依次执行完。</li>
+</ul>
+</li>
+<li>async和await<ul>
+<li><code>async</code> 是异步。<code>async</code>声明一个异步方法， <code>await</code>等待异步方法执行，会阻塞后面跟着代码。</li>
+</ul>
 </li>
 </ul>
 <h2 id="call、apply、bind的区别"><a href="#call、apply、bind的区别" class="headerlink" title="call、apply、bind的区别"></a>call、apply、bind的区别</h2><ul>
@@ -542,46 +800,6 @@ IconifyProviders = {
 </ul>
 </li>
 </ul>
-<h2 id="对正则表达式的理解和应用场景（面试官系列-js系列）"><a href="#对正则表达式的理解和应用场景（面试官系列-js系列）" class="headerlink" title="对正则表达式的理解和应用场景（面试官系列-js系列）"></a>对正则表达式的理解和应用场景（面试官系列-js系列）</h2><ul>
-<li>正则表达式用于匹配字符串，设计思想是用一种描述性的语言定义一个规则，符合规则的字符串认为“匹配”，否则字符串不合法的。</li>
-<li>创建方式<ul>
-<li>字面量创建，由包含在斜杠之间的模式组成</li>
-<li>调用<code>RegExp</code>对象的构造函数</li>
-</ul>
-</li>
-<li>正则表达式特性<ul>
-<li>贪婪模式</li>
-<li>懒惰模式</li>
-<li>分组</li>
-</ul>
-</li>
-<li>匹配方法（函数）</li>
-<li>应用场景<ul>
-<li>验证QQ合法性</li>
-<li>验证电话号码</li>
-</ul>
-</li>
-</ul>
-<h2 id="对事件循环的理解"><a href="#对事件循环的理解" class="headerlink" title="对事件循环的理解"></a>对事件循环的理解</h2><ul>
-<li><code>JavaScript</code>是一门单线程的语言，同一时间内只能做一件事，实现单线程非阻塞的方法就是事件循环</li>
-<li>在<code>JavaScript</code>中，所有的任务都可以分为<ul>
-<li>同步任务：立即执行的任务，一般会直接进入到主线程中执行</li>
-<li>异步任务：比如<code>ajax</code>网络请求，<code>setTimeout</code>定时函数等</li>
-</ul>
-</li>
-<li>同步任务进入主线程，即主执行栈，异步任务进入任务队列，主线程内的任务执行完毕为空，会去任务队列读取对应的任务，推入主线程执行。这个过程的不断重复就事件循环。</li>
-<li>异步任务还可以细分为<ul>
-<li>微任务：一个需要异步执行的函数，执行时机是主函数执行结束之后、当前宏任务结束之前。常见的微任务有：Promise.then、MutaionObserver、process.nextTick</li>
-<li>宏任务：宏任务的时间粒度比较大，执行的时间间隔不能精确控制，常见的宏任务有：script (外层同步代码)、setTimeout/setInterval、UI rendering/UI事件、postMessage、MessageChannel、setImmediate、I/O（Node.js）</li>
-<li>执行顺序：执行一个宏任务，如果遇到微任务就将它放到微任务的事件队列中；当前宏任务执行完成后，会查看微任务的事件队列，然后将里面的所有微任务依次执行完。</li>
-</ul>
-</li>
-<li>async和await<ul>
-<li><code>async</code> 是异步。<code>async</code>声明一个异步方法， <code>await</code>等待异步方法执行，会阻塞后面跟着代码。</li>
-<li></li>
-</ul>
-</li>
-</ul>
 <h2 id="箭头函数特点"><a href="#箭头函数特点" class="headerlink" title="箭头函数特点"></a>箭头函数特点</h2><ul>
 <li>更简洁的语法<ul>
 <li>只有一个形参就不需要用括号括起来</li>
@@ -602,19 +820,6 @@ IconifyProviders = {
 </ul>
 </li>
 <li><p>手写new操作符（面试官系列-js系列）</p>
-</li>
-</ul>
-<h2 id="ajax的原理和实现（封装）（面试官系列-js系列）"><a href="#ajax的原理和实现（封装）（面试官系列-js系列）" class="headerlink" title="ajax的原理和实现（封装）（面试官系列-js系列）"></a>ajax的原理和实现（封装）（面试官系列-js系列）</h2><ul>
-<li><code>AJAX</code>是异步的<code>JavaScript</code> 和<code>XML</code>，是一种创建交互式网页应用的网页开发技术，可以在不重新加载整个网页的情况下，与服务器交换数据，并且更新部分网页</li>
-<li>原理：通过<code>XmlHttpRequest</code>对象来向服务器发异步请求，从服务器获得数据，然后用<code>JavaScript</code>来操作<code>DOM</code>而更新页面</li>
-<li>实现：实现 <code>Ajax</code>异步交互需要服务器逻辑进行配合<ul>
-<li>创建 <code>Ajax</code>的核心对象 <code>XMLHttpRequest</code>对象</li>
-<li>通过 <code>XMLHttpRequest</code> 对象的 <code>open()</code> 方法与服务端建立连接</li>
-<li>构建请求所需的数据内容，并通过<code>XMLHttpRequest</code> 对象的 <code>send()</code> 方法发送给服务器端</li>
-<li>通过 <code>XMLHttpRequest</code> 对象提供的 <code>onreadystatechange</code> 事件监听服务器端你的通信状态</li>
-<li>接受并处理服务端向客户端响应的数据结果</li>
-<li>将处理结果更新到 <code>HTML</code>页面中</li>
-</ul>
 </li>
 </ul>
 <h2 id="事件循环机制（宏任务、微任务）"><a href="#事件循环机制（宏任务、微任务）" class="headerlink" title="事件循环机制（宏任务、微任务）"></a>事件循环机制（宏任务、微任务）</h2><ul>
@@ -646,5 +851,234 @@ IconifyProviders = {
 <h2 id="同步异步执行问题"><a href="#同步异步执行问题" class="headerlink" title="同步异步执行问题"></a>同步异步执行问题</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params">count</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`foo<span class="subst">$&#123;count&#125;</span>`</span>);</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123; <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`bar<span class="subst">$&#123;count&#125;</span>`</span>); &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">f</span>(<span class="number">1</span>);</span><br><span class="line"><span class="title function_">f</span>(<span class="number">2</span>);</span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123; <span class="title function_">f</span>(<span class="number">3</span>); &#125;);</span><br></pre></td></tr></table></figure>
 
 <p>[^foo1 foo2 bar1 bar2 foo3 bar3]: 调用 f(1)  的时候，会执行同步代码，打印出 foo1，然后 03 行的 setTimeout 被放入到异步执行队列，接下来调用 f(2)  的时候，打印出 foo2，后面 03 行的 setTimeout 又被放入到异步执行队列。然后执行 07 行的语句，被放入到异步执行队列。至此，所有同步代码就都执行完毕了。 接下来开始执行异步代码，那么大家时间没写，就都是相同的，所以谁先被放入到异步队列，谁就先执行，所以先打印出 bar1、然后是 bar2，接下来执行之前 07 行放入到异步队列里面的 setTimeout，先执行 f 函数里面的同步代码，打印出 foo3，然后是最后一个异步，打印出 bar3</p>
+<h2 id="Virtual-dom"><a href="#Virtual-dom" class="headerlink" title="Virtual dom"></a>Virtual dom</h2><p>virtual dom 是将真实的 dom 的数据抽取出来，以对象的形式模拟树形结构。当状态改变时，重新构造虚拟树，新树旧树比较，把差异更新到真正的 dom 树上，来更新视图。</p>
+<p>diff 算法比较的也是 virtual dom。</p>
+<p>diff，就是新旧虚拟 dom 的比较，如果有差异就以新的为准，然后再插入的真实的 dom 中，重新渲染</p>
 <h2 id="设置轮播"><a href="#设置轮播" class="headerlink" title="设置轮播"></a>设置轮播</h2><p>图片轮播的原理就是图片排成一行，然后准备一个只有一张图片大小的容器，对这个容器设置超出部分隐藏，在控制定时器来让这些图片整体左移或右移，这样呈现出来的效果就是图片在轮播了。</p>
-<h1 id="Typescript"><a href="#Typescript" class="headerlink" title="Typescript"></a>Typescript</h1></div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="Donate" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><span class="icon iconify" data-icon="ri:hand-coin-line"></span></span><div id="reward-comment">I'm so cute. Please give me money.</div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>Post author: </strong>Aria</li><li class="post-copyright-link"><strong>Post link: </strong><a href="https://aria-geng.github.io/_myBlog/2023/04/30/JavaScript|TypeScript/" title="JavaScript|TypeScript">https://aria-geng.github.io/_myBlog/2023/04/30/JavaScript|TypeScript/</a></li><li class="post-copyright-license"><strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><span class="icon iconify" data-icon="ri:creative-commons-line"></span><span class="icon iconify" data-icon="ri:creative-commons-by-line"></span><span class="icon iconify" data-icon="ri:creative-commons-nc-line"></span><span class="icon iconify" data-icon="ri:creative-commons-sa-line"></span></a> unless otherwise stated.</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/_myBlog/2023/04/30/CN%7CBrowser%7COS/" rel="prev" title="Computer Network|Browser|OS"><span class="icon iconify" data-icon="ri:arrow-left-s-line"></span><span class="post-nav-text">Computer Network|Browser|OS</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/_myBlog/2023/04/30/HTML%7CCSS/" rel="next" title="HTML|CSS"><span class="post-nav-text">HTML|CSS</span><span class="icon iconify" data-icon="ri:arrow-right-s-line"></span></a></div></div></div><div class="hty-card" id="comment"></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2019 – 2023 </span><span class="with-love" id="animate"><span class="icon iconify" data-icon="ri:cloud-line"></span></span><span class="author"> Aria</span></div><div class="powered"><span>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> v5.4.2</span><span class="footer-separator">|</span><span>Theme - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.10.9</span></div></footer></div><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><span class="icon iconify" data-icon="ri:arrow-up-s-line"></span><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a></body></html>
+<h1 id="面试官系列-js系列"><a href="#面试官系列-js系列" class="headerlink" title="面试官系列-js系列"></a>面试官系列-js系列</h1><h2 id="DOM-和-BOM（和常用方法）"><a href="#DOM-和-BOM（和常用方法）" class="headerlink" title="DOM 和 BOM（和常用方法）"></a>DOM 和 BOM（和常用方法）</h2><ul>
+<li>DOM：文档对象模型，把文档当做一个对象，主要定义处理网页内容的方法和接口。</li>
+<li>BOM：浏览器对象模型，把浏览器当做一个对象来对待，主要定义与浏览器进行交互的方法和接口。比如如何进行页面的后退，前进，刷新，浏览器的窗口发生变化，滚动条的滚动，以及获取客户的一些信息如：浏览器品牌版本，屏幕分辨率</li>
+</ul>
+<h2 id="解释事件代理（委托）和应用场景（面试官系列-js系列）"><a href="#解释事件代理（委托）和应用场景（面试官系列-js系列）" class="headerlink" title="解释事件代理（委托）和应用场景（面试官系列-js系列）"></a>解释事件代理（委托）和应用场景（面试官系列-js系列）</h2><ul>
+<li>事件代理：把一个元素响应事件（<code>click</code>、<code>keydown</code>……）的函数委托到另一个元素，真正绑定事件的是外层元素，而不是目标元素。当事件响应到目标元素上时，会通过事件冒泡机制触发它的外层元素绑定事件上，然后在外层元素上执行函数。</li>
+<li>应用场景<ul>
+<li>如果我们有一个列表，列表之中有大量的列表项，我们需要在点击列表项的时候响应一个事件。如果给每个列表项都绑定一个函数，那对于内存消耗是非常大的。这时候就可以事件委托，把点击事件绑定在父级元素<code>ul</code>上面，然后执行事件的时候再去匹配目标元素。</li>
+<li>但是如果用户能够随时动态的增加或者去除列表项元素，每一次改变的时候都需要重新给新增的元素绑定事件，给即将删去的元素解绑事件。如果用了事件委托就不会这么麻烦，因为事件是绑定在父层的，和目标元素的增减是没有关系的，执行到目标元素是在真正响应执行事件函数的过程中去匹配的。</li>
+<li>适合事件委托的事件有：<code>click</code>，<code>mousedown</code>，<code>mouseup</code>，<code>keydown</code>，<code>keyup</code>，<code>keypress</code></li>
+</ul>
+</li>
+<li>优点<ul>
+<li>减少整个页面所需的内存，提升整体性能</li>
+<li>动态绑定，减少重复工作</li>
+</ul>
+</li>
+<li>局限性：<ul>
+<li><code>focus</code>、<code>blur</code>这些事件没有事件冒泡机制，所以无法进行委托绑定事件</li>
+<li><code>mousemove</code>、<code>mouseout</code>这样的事件，虽然有事件冒泡，但是只能不断通过位置去计算定位，对性能消耗高，因此也是不适合于事件委托的</li>
+</ul>
+</li>
+</ul>
+<h2 id="如何判断一个元素是否在可视区域中？"><a href="#如何判断一个元素是否在可视区域中？" class="headerlink" title="如何判断一个元素是否在可视区域中？"></a>如何判断一个元素是否在可视区域中？</h2><ul>
+<li><p>日常开发中经常需要判断目标元素是否在视窗之内或者和视窗的距离小于一个值（例如 100 px），从而实现一些常用功能，例如</p>
+<ul>
+<li><p>图片的懒加载</p>
+</li>
+<li><p>列表的无限滚动</p>
+</li>
+<li><p>计算广告元素的曝光情况</p>
+</li>
+<li><p>可点击链接的预加载</p>
+</li>
+</ul>
+</li>
+<li><p>实现方式（面试官系列-js系列）</p>
+<ul>
+<li>offsetTop、scrollTop</li>
+<li>getBoundingClientRect</li>
+<li>Intersection Observer</li>
+</ul>
+</li>
+</ul>
+<h2 id="正则表达式的理解和应用场景"><a href="#正则表达式的理解和应用场景" class="headerlink" title="正则表达式的理解和应用场景"></a>正则表达式的理解和应用场景</h2><ul>
+<li>正则表达式用于匹配字符串，设计思想是用一种描述性的语言定义一个规则，符合规则的字符串认为“匹配”，否则字符串不合法的。</li>
+<li>创建方式<ul>
+<li>字面量创建，由包含在斜杠之间的模式组成</li>
+<li>调用<code>RegExp</code>对象的构造函数</li>
+</ul>
+</li>
+<li>正则表达式特性<ul>
+<li>贪婪模式</li>
+<li>懒惰模式</li>
+<li>分组</li>
+</ul>
+</li>
+<li>匹配方法（函数）</li>
+<li>应用场景<ul>
+<li>验证QQ合法性</li>
+<li>验证电话号码</li>
+</ul>
+</li>
+</ul>
+<h2 id="ajax的原理和实现（用promise封装）"><a href="#ajax的原理和实现（用promise封装）" class="headerlink" title="ajax的原理和实现（用promise封装）"></a>ajax的原理和实现（用promise封装）</h2><ul>
+<li><p><code>AJAX</code>是异步的<code>JavaScript</code> 和<code>XML</code>，是一种创建交互式网页应用的网页开发技术，可以在不重新加载整个网页的情况下，与服务器交换数据，并且更新部分网页</p>
+</li>
+<li><p>原理：通过<code>XmlHttpRequest</code>对象来向服务器发异步请求，从服务器获得数据，然后用<code>JavaScript</code>来操作<code>DOM</code>而更新页面</p>
+</li>
+<li><p>实现：实现 <code>Ajax</code>异步交互需要服务器逻辑进行配合</p>
+<ul>
+<li>创建 <code>Ajax</code>的核心对象 <code>XMLHttpRequest</code>对象</li>
+<li>通过 <code>XMLHttpRequest</code> 对象的 <code>open()</code> 方法与服务端建立连接</li>
+<li>构建请求所需的数据内容，并通过<code>XMLHttpRequest</code> 对象的 <code>send()</code> 方法发送给服务器端</li>
+<li>通过 <code>XMLHttpRequest</code> 对象提供的 <code>onreadystatechange</code> 事件监听服务器端你的通信状态</li>
+<li>接受并处理服务端向客户端响应的数据结果</li>
+<li>将处理结果更新到 <code>HTML</code>页面中</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 封装一个名为ajax的函数，它接受三个参数：URL、HTTP方法和数据</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ajax</span>(<span class="params">url, method, data</span>) &#123;</span><br><span class="line">  <span class="comment">// 创建并返回一个Promise对象</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="keyword">function</span>(<span class="params">resolve, reject</span>) &#123;</span><br><span class="line">    <span class="comment">// 创建一个XMLHttpRequest对象</span></span><br><span class="line">    <span class="keyword">var</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span><br><span class="line">    <span class="comment">// 设置请求的URL和HTTP方法</span></span><br><span class="line">    xhr.<span class="title function_">open</span>(method, url);</span><br><span class="line">    <span class="comment">// 当请求成功时，执行该回调函数</span></span><br><span class="line">    xhr.<span class="property">onload</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="comment">// 如果HTTP状态码为200（即成功），则执行resolve函数并传递响应数据</span></span><br><span class="line">      <span class="keyword">if</span> (xhr.<span class="property">status</span> === <span class="number">200</span>) &#123;</span><br><span class="line">        <span class="title function_">resolve</span>(xhr.<span class="property">response</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 否则执行reject函数并传递HTTP状态消息</span></span><br><span class="line">      <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="title function_">reject</span>(xhr.<span class="property">statusText</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">// 当请求发生错误时，执行该回调函数</span></span><br><span class="line">    xhr.<span class="property">onerror</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="comment">// 执行reject函数并传递错误消息</span></span><br><span class="line">      <span class="title function_">reject</span>(<span class="string">&quot;Network Error&quot;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">// 发送请求</span></span><br><span class="line">    xhr.<span class="title function_">send</span>(data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">ajax</span>(<span class="string">&quot;https://example.com/api/data&quot;</span>, <span class="string">&quot;GET&quot;</span>)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">response</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Success:&quot;</span>, response);</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="keyword">function</span>(<span class="params">error</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Error:&quot;</span>, error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Proxy和Object-defineProperty的区别和特点"><a href="#Proxy和Object-defineProperty的区别和特点" class="headerlink" title="Proxy和Object.defineProperty的区别和特点"></a>Proxy和Object.defineProperty的区别和特点</h2><ul>
+<li>都支持对JavaScript对象进行动态的、深层次的访问和修改</li>
+<li>Object.defineProperty不能检测到对象属性的新增删除和修改，不能监听数组的变化，但Proxy可以</li>
+<li>Proxy是对整个对象的代理，Object.defineProperty只能代理某个属性。</li>
+<li>若对象内部属性要全部递归代理，Proxy可以只在调用的时候递归，而Object.definePropery需要一次完成所有递归，性能比Proxy差。</li>
+<li>Proxy不兼容IE，Object.defineProperty不兼容IE8及以下Proxy使用上比Object.defineProperty方便多。</li>
+<li>Proxy比Object.defineProperty使用方便</li>
+</ul>
+<h2 id="如何实现上拉加载，下拉刷新？"><a href="#如何实现上拉加载，下拉刷新？" class="headerlink" title="如何实现上拉加载，下拉刷新？"></a>如何实现上拉加载，下拉刷新？</h2><ul>
+<li>第三方库：<code>iscroll</code>、<code>better-scroll</code>、<code>pulltorefresh.js</code>库</li>
+<li>手动实现</li>
+<li>使用better-scroll库实现</li>
+</ul>
+<h2 id="单点登录（SSO）和实现"><a href="#单点登录（SSO）和实现" class="headerlink" title="单点登录（SSO）和实现"></a>单点登录（SSO）和实现</h2><h2 id="Web常见攻击方式和防御措施"><a href="#Web常见攻击方式和防御措施" class="headerlink" title="Web常见攻击方式和防御措施"></a>Web常见攻击方式和防御措施</h2><h3 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h3><ul>
+<li>跨站脚本攻击，允许攻击者将恶意代码植入到提供给其它用户使用的页面中</li>
+<li>攻击目标：为了盗取存储在客户端的<code>cookie</code>或者其他网站用于识别客户端身份的敏感信息。一旦获取到合法用户的信息后，攻击者可以假冒合法用户与网站进行交互。</li>
+<li>根据攻击来源分<ul>
+<li>存储型<ul>
+<li>步骤<ol>
+<li>攻击者将恶意代码提交到目标网站的数据库中</li>
+<li>用户打开目标网站时，网站服务端将恶意代码从数据库取出，拼接在 HTML 中返回给浏览器</li>
+<li>用户浏览器接收到响应后解析执行，混在其中的恶意代码也被执行</li>
+<li>恶意代码窃取用户数据并发送到攻击者的网站，或者冒充用户的行为，调用目标网站接口执行攻击者指定的操作</li>
+</ol>
+</li>
+<li>场景：带有用户保存数据的网站功能，如论坛发帖、商品评论、用户私信等</li>
+</ul>
+</li>
+<li>反射型<ul>
+<li>步骤<ol>
+<li>攻击者构造出特殊的 URL，其中包含恶意代码</li>
+<li>用户打开带有恶意代码的 URL 时，网站服务端将恶意代码从 URL 中取出，拼接在 HTML 中返回给浏览器</li>
+<li>用户浏览器接收到响应后解析执行，混在其中的恶意代码也被执行</li>
+<li>恶意代码窃取用户数据并发送到攻击者的网站，或者冒充用户的行为，调用目标网站接口执行攻击者指定的操作</li>
+</ol>
+</li>
+<li>反射型XSS和存储型XSS的区别<ul>
+<li>存储型 XSS 的恶意代码存在数据库里，反射型 XSS 的恶意代码存在 URL 里。</li>
+</ul>
+</li>
+<li>场景：通过 URL 传递参数的功能，如网站搜索、跳转等。</li>
+<li>由于需要用户主动打开恶意的 URL 才能生效，攻击者往往会结合多种手段诱导用户点击。</li>
+<li>POST 的内容也可以触发反射型 XSS，只不过其触发条件比较苛刻（需要构造表单提交页面，并引导用户点击），所以非常少见。</li>
+</ul>
+</li>
+<li>DOM型<ul>
+<li>步骤<ol>
+<li>攻击者构造出特殊的 URL，其中包含恶意代码</li>
+<li>用户打开带有恶意代码的 URL</li>
+<li>用户浏览器接收到响应后解析执行，前端 JavaScript 取出 URL 中的恶意代码并执行</li>
+<li>恶意代码窃取用户数据并发送到攻击者的网站，或者冒充用户的行为，调用目标网站接口执行攻击者指定的操作</li>
+</ol>
+</li>
+<li>跟前两种 XSS 的区别：DOM 型 XSS 攻击中，取出和执行恶意代码由浏览器端完成，属于前端 JavaScript 自身的安全漏洞，而其他两种 XSS 都属于服务端的安全漏洞</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>预防<ul>
+<li><code>XSS</code>攻击的两大要素：<ul>
+<li>攻击者提交而恶意代码</li>
+<li>浏览器执行恶意代码</li>
+</ul>
+</li>
+<li>防止浏览器执行恶意代码：<ul>
+<li>用 <code>.innerHTML</code>、<code>.outerHTML</code>、<code>document.write()</code> 时不把不可信的数据作为 HTML 插到页面上，尽量用 <code>.textContent</code>、<code>.setAttribute()</code> 等</li>
+<li> <code>Vue/React</code> 技术栈，最好用使用 <code>v-html</code>/<code>dangerouslySetInnerHTML</code> 功能，如果不用就在前端 <code>render</code> 阶段避免 <code>innerHTML</code>、<code>outerHTML</code> 的 XSS 隐患</li>
+<li>DOM 中的内联事件监听器，如 <code>location</code>、<code>onclick</code>、<code>onerror</code>、<code>onload</code>、<code>onmouseover</code> 等，<code>&lt;a&gt;</code> 标签的 <code>href</code> 属性，JavaScript 的 <code>eval()</code>、<code>setTimeout()</code>、<code>setInterval()</code> 等，都能把字符串作为代码运行。需要避免不可信的数据拼接到字符串中传递给这些 API，很容易产生安全隐患。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h3><ul>
+<li><p>跨站请求伪造：攻击者诱导受害者进入第三方网站，在第三方网站中，向被攻击网站发送跨站请求，利用受害者在被攻击网站已经获取的注册凭证，绕过后台的用户验证，冒充用户对被攻击的网站执行操作。</p>
+</li>
+<li><p>步骤</p>
+<ol>
+<li>受害者登录a.com，并保留了登录凭证（Cookie）</li>
+<li>攻击者引诱受害者访问了b.com</li>
+<li>b.com 向 a.com 发送了一个请求：a.com/act=xx。浏览器会默认携带a.com的Cookie</li>
+<li>a.com接收到请求后，对请求进行验证，并确认是受害者的凭证，误以为是受害者自己发送的请求</li>
+<li>a.com以受害者的名义执行了act=xx</li>
+<li>攻击完成，攻击者在受害者不知情的情况下，冒充受害者，让a.com执行了自己定义的操作</li>
+</ol>
+</li>
+<li><p>特点</p>
+<ul>
+<li>攻击一般发起在第三方网站，而不是被攻击的网站。被攻击的网站无法防止攻击发生</li>
+<li>攻击利用受害者在被攻击网站的登录凭证，冒充受害者提交操作；而不是直接窃取数据</li>
+<li>整个过程攻击者并不能获取到受害者的登录凭证，仅仅是“冒用”</li>
+<li>跨站请求可以用各种方式：图片URL、超链接、CORS、Form提交等等。部分请求方式可以直接嵌入在第三方论坛、文章中，难以进行追踪</li>
+</ul>
+</li>
+<li><p>预防</p>
+<ul>
+<li><p>被攻击的网站无法防止攻击发生，只能通过增强自己网站针对CSRF的防护能力来提升安全性</p>
+</li>
+<li><p>防止<code>csrf</code>常用方案</p>
+<ul>
+<li><p>阻止不明外域的访问</p>
+<ul>
+<li>同源检测</li>
+<li>Samesite Cookie</li>
+</ul>
+</li>
+<li><p>提交时要求附加本域才能获取的信息</p>
+<ul>
+<li><p>CSRF Token</p>
+<ul>
+<li><p>用户打开页面的时候，服务器需要给这个用户生成一个Token</p>
+</li>
+<li><p>对于GET请求，Token将附在请求地址之后。对于 POST 请求来说，要在 form 的最后加上</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;hidden&quot;</span> <span class="attr">name</span>=<span class="string">&quot;csrftoken&quot;</span> <span class="attr">value</span>=<span class="string">&quot;tokenvalue&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>当用户从客户端得到了Token，再次提交给服务器的时候，服务器需要判断Token的有效性</p>
+</li>
+</ul>
+</li>
+<li><p>双重Cookie验证</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="SQL注入攻击"><a href="#SQL注入攻击" class="headerlink" title="SQL注入攻击"></a>SQL注入攻击</h3><ul>
+<li>通过将恶意的 <code>Sql</code>查询或添加语句插入到应用的输入参数中，再在后台 <code>Sql</code>服务器上解析执行进行的攻击</li>
+<li>步骤<ul>
+<li>找出SQL漏洞的注入点</li>
+<li>判断数据库的类型以及版本</li>
+<li>猜解用户名和密码</li>
+<li>利用工具查找Web后台管理入口</li>
+<li>入侵和破坏</li>
+</ul>
+</li>
+<li>预防方式<ul>
+<li>严格检查输入变量的类型和格式</li>
+<li>过滤和转义特殊字符</li>
+<li>对访问数据库的Web应用程序采用Web应用防火墙</li>
+</ul>
+</li>
+</ul>
+<h1 id="Typescript"><a href="#Typescript" class="headerlink" title="Typescript"></a>Typescript</h1><h2 id="面试官系列TS系列"><a href="#面试官系列TS系列" class="headerlink" title="面试官系列TS系列"></a>面试官系列TS系列</h2></div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="Donate" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><span class="icon iconify" data-icon="ri:hand-coin-line"></span></span><div id="reward-comment">I'm so cute. Please give me money.</div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>Post author: </strong>Aria</li><li class="post-copyright-link"><strong>Post link: </strong><a href="https://aria-geng.github.io/_myBlog/2023/04/30/JavaScript|TypeScript/" title="JavaScript|TypeScript">https://aria-geng.github.io/_myBlog/2023/04/30/JavaScript|TypeScript/</a></li><li class="post-copyright-license"><strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><span class="icon iconify" data-icon="ri:creative-commons-line"></span><span class="icon iconify" data-icon="ri:creative-commons-by-line"></span><span class="icon iconify" data-icon="ri:creative-commons-nc-line"></span><span class="icon iconify" data-icon="ri:creative-commons-sa-line"></span></a> unless otherwise stated.</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/_myBlog/2023/04/30/CN%7CBrowser%7COS/" rel="prev" title="Computer Network|Browser|OS"><span class="icon iconify" data-icon="ri:arrow-left-s-line"></span><span class="post-nav-text">Computer Network|Browser|OS</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/_myBlog/2023/04/30/HTML%7CCSS/" rel="next" title="HTML|CSS"><span class="post-nav-text">HTML|CSS</span><span class="icon iconify" data-icon="ri:arrow-right-s-line"></span></a></div></div></div><div class="hty-card" id="comment"></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2019 – 2023 </span><span class="with-love" id="animate"><span class="icon iconify" data-icon="ri:cloud-line"></span></span><span class="author"> Aria</span></div><div class="powered"><span>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> v5.4.2</span><span class="footer-separator">|</span><span>Theme - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.10.9</span></div></footer></div><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><span class="icon iconify" data-icon="ri:arrow-up-s-line"></span><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a></body></html>
